@@ -1,0 +1,363 @@
+@import url("//db.onlinewebfonts.com/c/cd0381aa3322dff4babd137f03829c8c?family=Tahoma");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("//db.onlinewebfonts.com/c/e1ac498516da18eec7c7b667b7cde758?family=MS+Mincho");
+@import url("//db.onlinewebfonts.com/c/17a23ea4e4341cb064e50189d1fe41a7?family=Sitka+Small");
+
+:root {
+  --section_padding: 65px 120px;
+  --primary_paragraph_color: #000;
+  --opacity: 0.3;
+  --header_font_size: 42px;
+  --font_size: 24px;
+  --primary_font_family: "tahoma";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: #3d525c;
+  padding: 24px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-family: var(--primary_font_family);
+  color: #fff;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: var(--header_font_size);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link {
+  font-size: var(--font_size);
+  color: #f3eded;
+  cursor: pointer;
+  transition: text-decoration ease-in-out 0.5s;
+  transition: opacity ease-in-out 0.5s;
+}
+
+.nav-link:nth-child(2) {
+  margin-left: 2rem;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  opacity: 0.92;
+}
+
+.bars {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-list {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.list-item {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  border-bottom: 0.4px solid #eee;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.d-block {
+  display: block;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    padding: 20px 60px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .bars {
+    display: block;
+  }
+  .nav-link {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    padding: 16px 24px;
+  }
+  .logo {
+    font-size: var(--font_size);
+  }
+  .bars {
+    display: block;
+    width: 24px;
+  }
+  .nav-link {
+    display: none;
+  }
+}
+
+/* END OF NAVBAR */
+
+/* MAIN */
+
+/* HERO SECTION */
+
+.section-hero {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 150px;
+}
+
+.hero-content {
+  flex: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.history {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-paragraph {
+  width: 715px;
+  text-align: justify;
+  font-family: "Playfair Display", serif;
+  font-size: var(--font_size);
+  line-height: 36px;
+  word-spacing: 8px;
+}
+
+@media screen and (max-width: 1200px) {
+  .section-hero {
+    padding: 40px 10px;
+  }
+  .hero-paragraph {
+    width: 500px;
+    margin-bottom: 2rem;
+    font-size: 20px;
+    letter-spacing: 4;
+    line-height: 28px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .section-hero {
+    padding: 40px 10px;
+  }
+  .hero-content {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .history svg {
+    width: 180px;
+    height: 180px;
+  }
+  .hero-paragraph {
+    width: 400px;
+    margin-bottom: 4rem;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero-paragraph {
+    width: 320px;
+    margin-bottom: 1rem;
+    font-size: 14px;
+  }
+}
+
+/* END OF HERO SECTION*/
+
+/* Most Visited */
+
+.cards-section {
+  width: 100%;
+  height: 100%;
+  padding: var(--section_padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.most-visited {
+  background-color: rgba(164, 148, 137, 0.2);
+}
+
+.section-header {
+  font-family: "Tahoma";
+  font-size: var(--header_font_size);
+  color: #545353;
+  text-align: center;
+}
+
+.cards {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  color: #111111;
+}
+
+.card {
+  margin: 0 1rem;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 560px;
+  position: relative;
+}
+
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.3;
+  background-position: center;
+  background-size: cover;
+}
+
+.versailles-bg {
+  background-image: url("/assets/versailles.jpg");
+}
+
+.lincoln-bg {
+  background-image: url("/assets/lincoln.jpg");
+}
+
+.topkapı-bg {
+  background-image: url("/assets/topkapı.jpg");
+}
+.card-header {
+  font-size: 32px;
+  text-decoration: underline;
+  font-family: "Mincho";
+}
+
+.card-content {
+  margin-top: 2rem;
+  font-size: 24px;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  .cards-section {
+    padding: 40px 60px;
+  }
+  .card {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cards-section {
+    padding: 25px 15px;
+  }
+  .section-header {
+    font-size: 24px;
+  }
+  .card {
+    height: 240px;
+  }
+  .card-header {
+    font-size: 16px;
+  }
+  .card-content {
+    font-size: 14px;
+  }
+}
+
+/*END OF MOST VISITED*/
+
+/* Ancient Structures*/
+
+.ancient-structures {
+  background-color: rgba(61, 82, 92, 0.3);
+}
+
+.pyramids-bg {
+  background-image: url("/assets/pyramids.jpg");
+}
+.vanfortress-bg {
+  background-image: url("/assets/vanfortress.jpg");
+}
+.colleseum-bg {
+  background-image: url("/assets/colleseum.jpg");
+}
+
+/*END OF ANCIENT STRUCTURES*/
+
+/* END OF MAIN */
+
+/* FOOTER*/
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #516566;
+  padding: 60px 0;
+}
+
+.footer-text {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #1c1c1c;
+}
+
+/* END OF FOOTER*/
